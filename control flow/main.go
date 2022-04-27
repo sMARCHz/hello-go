@@ -91,6 +91,28 @@ CustomLoop:
 	}
 	fmt.Println()
 
+	// For range (string, array, slices, map, ...)
+	i8 := "Hello Go"
+	for k, v := range i8 {
+		fmt.Printf("[%v,%v] ", k, string(v))
+	}
+	fmt.Println()
+
+	i9 := []int{1, 2, 4, 8, 16, 32, 64} // make([]int, 7)
+	for _, v := range i9 {
+		fmt.Printf("%v ", v)
+	}
+	fmt.Println()
+
+	i10 := map[string]int{
+		"America":  1,
+		"Thailand": 66,
+	}
+	for k, v := range i10 {
+		fmt.Printf("[%v,%v] ", k, v)
+	}
+	fmt.Println()
+
 	// Switch case
 	// Implicit break
 	switch1 := "10"
