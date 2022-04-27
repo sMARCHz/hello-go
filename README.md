@@ -17,3 +17,7 @@ Go has 2 types of Packages
 1. **Executable** -> Generates a executable file that we use for running application.  
 Package main is a **executable package** and **need func main()** inside it. If we use other package instead of main, nothing is going to come out when run go build.
 2. **Reusable** -> Code used as 'helper' or 'dependency'. Good place to put reusable logic.
+
+## Types
+1. **Value** -> int, float, string, bool, array, struct
+2. **Reference** -> slices, maps, function, pointer, channel
