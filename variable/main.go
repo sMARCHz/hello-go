@@ -21,7 +21,9 @@ func main() {
 	global = "shadowing" // shadowing
 	fmt.Println(global)
 
-	// Variable Types
+	// Data type
+	// This section contains only basic data types. In fact, Go has much more data types than this section (i.e. array, slices, struct, maps, function, interface).
+
 	// 1. Boolean
 	// Zero value = false
 	var btrue bool = true
