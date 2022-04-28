@@ -163,6 +163,8 @@ CustomLoop:
 		fallthrough
 	case switch5 >= 20000000000:
 		fmt.Println("Reach this condition") // certainly run without considering the condition
+	case switch5 < 1:
+		fmt.Println("Doesn't reach here")
 	default:
 		fmt.Println("No condition matched")
 	}
