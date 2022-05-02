@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	// Array is a collection of data of the same type.
-	// Array has fixed length -> when it's full you can't add more data to it.
+	// Array has fixed length -> when it's full, you can't add more data to it.
 	// Index begins with 0
 	var arr [3]string
 	arr[0] = "one"
@@ -26,7 +26,14 @@ func main() {
 	fmt.Println(arr4)
 
 	// Print each index's value
+	// For-each
 	for k, v := range arr2 {
 		fmt.Printf("Index[%v] = %v\n", k, v)
 	}
+	// For-i
+	for i := 0; i < len(arr2); i++ {
+		fmt.Println(arr2[i])
+	}
+
+	// See more in slice section
 }
