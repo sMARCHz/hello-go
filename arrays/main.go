@@ -35,5 +35,12 @@ func main() {
 		fmt.Println(arr2[i])
 	}
 
+	// Arrays is value type
+	// arr6 is a copy of arr5 so. If we change value in arr6, arr5 remains the same. (no effect to arr5)
+	arr5 := [...]int{1, 2, 3}
+	arr6 := arr5
+	arr6[1] = 5
+	fmt.Println(arr5, arr6)
+
 	// See more in slice section
 }
