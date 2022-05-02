@@ -7,7 +7,7 @@
 **go fmt** -> Formats all the code in each file in the current directory  
 **go install** -> Compiles and installs a package  
 **go get** -> Downloads the raw source code of someone else's packages  
-**got test** -> Runs any tests associated with the current project  
+**go test** -> Runs any tests associated with the current project  
 
 ## Go Packages
 
