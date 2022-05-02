@@ -41,6 +41,10 @@ func main() {
 	arr6 := arr5
 	arr6[1] = 5
 	fmt.Println(arr5, arr6)
+	// If we want arr5 get change when arr7 change, we can use & symbol to tell that arr7 is pointing to the same array as arr5
+	arr7 := &arr5
+	arr7[1] = 7
+	fmt.Println(arr5, *arr7) // use * to dereference
 
 	// See more in slice section
 }
