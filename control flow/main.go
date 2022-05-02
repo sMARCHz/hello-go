@@ -99,7 +99,7 @@ CustomLoop:
 	fmt.Println()
 
 	i9 := []int{1, 2, 4, 8, 16, 32, 64} // make([]int, 7)
-	for _, v := range i9 {
+	for _, v := range i9 {              // !! You can use _ to ignore the value so, Go won't complain you if you don't wanna use that variable.
 		fmt.Printf("%v ", v)
 	}
 	fmt.Println()
