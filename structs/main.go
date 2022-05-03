@@ -74,4 +74,32 @@ func main() {
 	animal2 := reflect.TypeOf(Animal2{})
 	field, _ := animal2.FieldByName("name")
 	fmt.Println(field.Tag)
+
+	// Method is function of specific struct
+	tesla := car{name: "Tesla", speedKPH: 100}
+	tesla.accelerate()
+	tesla.show()
+	fmt.Println(tesla.KPHToMPH())
+}
+
+type car struct {
+	name     string
+	speedKPH float32
+}
+
+// Method (Function) is value type so, c is a copy of the struct not the real
+// Structure: func (receiver) name(argument) returnType {}
+func (c car) show() {
+	fmt.Printf("Name=%v SpeedKPH=%v\n", c.name, c.speedKPH)
+}
+
+// Method with fixed returnValue
+func (c car) KPHToMPH() (mph float32) {
+	mph = 0.621 * c.speedKPH
+	return // always return mph because we declare it as returnValue
+}
+
+// Method's receiver can be both pointer receiver and value receiver
+func (c *car) accelerate() {
+	c.speedKPH += 20
 }
