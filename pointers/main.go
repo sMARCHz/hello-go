@@ -7,13 +7,13 @@ func main() {
 	// The memory address is always found in hexadecimal format
 	// Zero value = nil
 
-	// !! Important symbol
-	// * -> Use for Declaring variable as a pointer && Dereferencing a pointer to get the value which that address point to
+	// !! Important operator
+	// * -> Use for Declaring variable as a pointer && Dereferencing a pointer to get the value which the pointer points to
 	// & -> Use for Getting address of the variable
 
 	var a int = 20
 
-	// Declaration pointer
+	// Declaration
 	var b *int
 
 	// Assign pointer b equal to address of a

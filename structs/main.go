@@ -40,16 +40,16 @@ func main() {
 	hero4 := struct{ name string }{name: "Bruce"}
 	fmt.Println(hero4.name)
 
-	// Struct is value type. hero5 is a copy of hero5 so, if hero5 is changed, hero5 remains the same
+	// Struct is value type. hero6 is a copy of hero5 so, if hero6 is changed, hero5 remains the same
 	hero5 := Hero{number: 4, actorName: "Starlord"}
 	hero6 := hero5
 	hero6.actorName = "Spiderman"
 	fmt.Println(hero5.actorName, hero6.actorName)
 
-	// Same as arrays, we can use & to point hero7 to the same value as hero4
+	// Same as arrays, we can use & to point hero7 to hero5
 	hero7 := &hero5
 	hero7.actorName = "Antman"
-	fmt.Println(hero5.actorName, hero7.actorName) // actually (*hero6).actorName but compiler help us to simplify syntax
+	fmt.Println(hero5.actorName, hero7.actorName) // actually (*hero7).actorName but compiler help us to simplify syntax
 
 	// Struct has no inheritance relation but it has composition relation
 	type Animal struct {
