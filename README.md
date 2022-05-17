@@ -18,6 +18,12 @@ Go has 2 types of Packages
 Package main is a **executable package** and **need func main()** inside it. If we use other package instead of main, nothing is going to come out when run go build.
 2. **Reusable** -> Code used as 'helper' or 'dependency'. Good place to put reusable logic.
 
+### Tips for Go Packages
+
+1. New directory == New package
+2. We can use go module to manage packages and dependencies easier  
+``` go mod init <module name> ```
+
 ## Types
 
 1. **Value** -> int, float, string, bool, array, struct
