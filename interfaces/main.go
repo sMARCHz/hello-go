@@ -10,8 +10,8 @@ func main() {
 	// In Golang, it doesn't have explicit implementation like Java by using implements keyword.
 	// Declaring methods that match the exact same behavior as interface in the same file is the way Go implements interfaces
 	// In summary, there're 2 condition to implement interface
-	// 1. Declare all of the methods that the interface need
-	// 2. Methods and type must be in the same file as where the interface is declared
+	// 1. Declare all of the methods that the interface needs
+	// 2. Interface and implementation must be in the same package and folder
 
 	// Here we can change MyWriter to other implementations easily if we want to.
 	var w Writer = MyWriter{}
