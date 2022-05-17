@@ -28,3 +28,5 @@ Package main is a **executable package** and **need func main()** inside it. If 
 
 1. **Value** -> int, float, string, bool, array, struct
 2. **Reference** -> slices, maps, function, pointer, channel
+
+Ref. <https://www.youtube.com/watch?v=YS4e4q9oBaU>
