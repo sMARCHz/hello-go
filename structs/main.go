@@ -25,9 +25,14 @@ func main() {
 	hero2 := Hero{number: 2, actorName: "Wanda", companions: []string{"Vision"}}
 	fmt.Println(hero2)
 
-	// Initialization with new function (new() return a pointer to a newly allocated zero value of that type.)
-	hero3 := new(Hero)
-	fmt.Println(hero3)
+	// Initialization with zero memory allocation
+	hero3 := Hero{}
+	fmt.Println(&hero3)
+
+	// Initialization with new function (return a pointer to a newly allocated zero value of that type)
+	// Also allocate zero memory
+	hero4 := new(Hero)
+	fmt.Println(hero4)
 
 	// Retrieve value
 	fmt.Println(hero2.actorName)
@@ -37,19 +42,19 @@ func main() {
 	fmt.Println(hero2.actorName)
 
 	// Anonymous struct
-	hero4 := struct{ name string }{name: "Bruce"}
-	fmt.Println(hero4.name)
+	hero5 := struct{ name string }{name: "Bruce"}
+	fmt.Println(hero5.name)
 
-	// Struct is value type. hero6 is a copy of hero5 so, if hero6 is changed, hero5 remains the same
-	hero5 := Hero{number: 4, actorName: "Starlord"}
-	hero6 := hero5
-	hero6.actorName = "Spiderman"
-	fmt.Println(hero5.actorName, hero6.actorName)
+	// Struct is value type. hero7 is a copy of hero6 so, if hero7 is changed, hero6 remains the same
+	hero6 := Hero{number: 4, actorName: "Starlord"}
+	hero7 := hero6
+	hero7.actorName = "Spiderman"
+	fmt.Println(hero6.actorName, hero7.actorName)
 
-	// Same as arrays, we can use & to point hero7 to hero5
-	hero7 := &hero5
-	hero7.actorName = "Antman"
-	fmt.Println(hero5.actorName, hero7.actorName) // actually (*hero7).actorName but compiler help us to simplify syntax
+	// Same as arrays, we can use & to point hero8 to hero6
+	hero8 := &hero6
+	hero8.actorName = "Antman"
+	fmt.Println(hero6.actorName, hero8.actorName) // actually (*hero8).actorName but compiler help us to simplify syntax
 
 	// Struct has no inheritance relation but it has composition relation
 	type Animal struct {
