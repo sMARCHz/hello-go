@@ -1,30 +1,11 @@
 package main
 
-import (
-	"fmt"
-	"sync"
-)
-
-var wg sync.WaitGroup = sync.WaitGroup{}
+import "github.com/sMARCHz/hello-go/section"
 
 func main() {
-	// Declare channels
-	var ch chan int
+	// Introduce Channels
+	// section.FirstSection()
 
-	// Initialize channels
-	ch = make(chan int)
-
-	wg.Add(2)
-	go func() {
-		// Retreive value from the channel
-		i := <-ch
-		fmt.Println(i)
-		wg.Done()
-	}()
-	go func() {
-		// Push value to the channel
-		ch <- 42
-		wg.Done()
-	}()
-	wg.Wait()
+	// Channels deadlock
+	section.SecondSection()
 }
