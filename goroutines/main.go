@@ -3,7 +3,7 @@ package main
 import "github.com/sMARCHz/hello-go/section"
 
 func main() {
-	// Goroutine (concurrency)
+	// Introduce Goroutines (concurrency)
 	// section.FirstSection()
 
 	// WaitGroups
