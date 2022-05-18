@@ -22,9 +22,15 @@ func FirstSection() {
 		wg.Done()
 	}()
 	go func() {
-		// Send value to the channel
+		// Send value to the channel (copy of the value)
 		ch <- 42
 		wg.Done()
 	}()
 	wg.Wait()
+
+	// Tips
+	// If you are stuck with remember operation of the channel, there're short tips for you.
+	// Imagine channel as a pipe and arrow is the direction of the data.
+	// If arrow come out of the pipe, it means receiving 		<-ch
+	// If arrow go straight to the pipe, it means sending		ch<-
 }
