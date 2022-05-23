@@ -85,6 +85,15 @@ func main() {
 	field, _ := animal2.FieldByName("name")
 	fmt.Println(field.Tag)
 
+	// Empty interfaces is a type which you can put value of any types into it (See more in the interfaces section)
+	type Empty struct {
+		value interface{}
+	}
+	empty := Empty{value: 10}
+	empty2 := Empty{value: "abc"}
+	empty3 := Empty{value: Empty{true}}
+	fmt.Printf("Empty interfaces: %v, %v, %v\n", empty, empty2, empty3)
+
 	// Method is function of specific struct
 	tesla := car{name: "Tesla", speedKPH: 100}
 	tesla.accelerate()

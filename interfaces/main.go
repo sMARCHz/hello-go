@@ -25,6 +25,17 @@ func main() {
 	// Solution is to implement interface with pointer instead of concrete value. If we implement with pointer, we can use both value receiver and pointer receiver without any problems.
 	var wc WriterCloser = &BufferedWriter{}
 	wc.Write([]byte("Hello"))
+
+	// Additional information
+	// Empty interfaces (mentioned in the struct section)
+	// We can use if-else or switch statement to handle the different types of the empty interface
+	var myInterface interface{} = 20
+	switch myInterface.(type) {
+	case int:
+		fmt.Println("It's a integer")
+	case string:
+		fmt.Println("It's a string")
+	}
 }
 
 // Declaring interface
