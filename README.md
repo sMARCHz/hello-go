@@ -29,4 +29,10 @@ Package main is a **executable package** and **need func main()** inside it. If 
 1. **Value** -> int, float, string, bool, array, struct
 2. **Reference** -> slices, maps, function, pointer, channel
 
-Ref. <https://www.youtube.com/watch?v=YS4e4q9oBaU>
+## Go != OOP
+Go isn't OOP because **Go has no concept of class**. Although Go isn't OOP, we can extend the functionality of the type in Go by declaring the new type based on the  type which we want to extend from.  
+``` type deck []string  ```  
+According to the above code, it means the deck type has all functionilities of []string.  
+
+## Resource
+<https://www.youtube.com/watch?v=YS4e4q9oBaU>  
