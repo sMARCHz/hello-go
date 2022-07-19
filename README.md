@@ -34,5 +34,6 @@ Go isn't OOP because **Go has no concept of class**. Although Go isn't OOP, we c
 ``` type deck []string  ```  
 According to the above code, it means the deck type has all functionilities of []string.  
 
-## Resource
+## Reference
 <https://www.youtube.com/watch?v=YS4e4q9oBaU>  
+<https://www.udemy.com/course/go-the-complete-developers-guide/>
