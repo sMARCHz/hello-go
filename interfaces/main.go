@@ -8,18 +8,15 @@ func main() {
 	// Users doesn't need to know internal algorithms
 
 	// In Golang, it doesn't have explicit implementation like Java by using implements keyword.
-	// Declaring methods that match the exact same behavior as interface in the same file is the way Go implements interfaces
-	// In summary, there're 2 condition to implement interface
-	// 1. Declare all of the methods that the interface needs
-	// 2. Interface and implementation must be in the same package and folder
+	// Declaring all methods that match the exact same behavior as interface is the way Go implements interfaces
 
 	// Here we can change MyWriter to other implementations easily if we want to.
 	var w Writer = MyWriter{}
 	w.Write([]byte("Hi"))
 
 	// !!! Warning
-	// If we implement interfaces with the concrete value (using it directly not an address) but we declare one of the methods with pointer receiver, program's going to panick.
-	// It's because when we implement interface with the concrete value, the method need to has a value as the receiver (due to interface context).
+	// If we implement interfaces with the concrete value (initiate variable with a normal value not a pointer) but we declare one of the methods with pointer receiver, program's going to panick.
+	// It's because when we implement interface with the concrete value, the method need to has a value as the receiver (interfaces don't count that pointer receiver method as the one of implementation method so, it doesn't match the condition to implement interfaces. !! Only for concrete value).
 	// var wc WriterCloser = BufferedWriter{}
 
 	// Solution is to implement interface with pointer instead of concrete value. If we implement with pointer, we can use both value receiver and pointer receiver without any problems.
